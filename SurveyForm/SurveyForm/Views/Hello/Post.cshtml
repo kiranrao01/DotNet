@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+
+    <body>
+        <h>Submitted Info:</h>
+        @{
+                foreach(var current in @ViewBag.values)
+                {
+                    <p>@current.Key: @current.Value</P>
+                }
+        }
+        <form action="index" method="get">
+        <input type="Submit"  value="Back">
+        </form>
+    </body>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome @ViewBag.name, feel free to post a quote:</h1>
+    <form action = "quotes" method="POST">
+        <p>Add quote: <textarea rows = "8" cols = "40" name = "contentField"></textarea></p>
+        <input type="submit" value="Add my quote">
+    </form>
+    <div class = "error">
+        <p>@ViewBag.isquote</p>
+    </div>
+    <h3>Quotes:</h3>
+    @{
+        foreach(var quote in ViewBag.Quotes){
+            <p>"@quote.contentField"</p>
+            <p>@String.Format("{0: h:mtt MMMM d yyyy}", quote.created_at)</p>
+            <p>________________________________________________</p>
+        }
+    }
+</body>
+</html>

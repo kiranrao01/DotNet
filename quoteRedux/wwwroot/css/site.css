@@ -1,0 +1,10 @@
+/*Write all of your CSS here*/
+div{
+    display: block;
+}
+input{
+    display: inline;
+}
+.error{
+    color: red;
+}
